@@ -1,0 +1,49 @@
+//
+// Include the necessary resources
+//
+#include <winver.h>
+#include <ntdef.h>
+
+#ifdef RC_INVOKED
+
+//
+// Set up debug information
+//
+#if DBG
+#define VER_DBG VS_FF_DEBUG
+#else
+#define VER_DBG 0
+#endif
+
+// ------- version info -------------------------------------------------------
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION             1,0,0,0
+PRODUCTVERSION          1,0,0,0
+FILEFLAGSMASK           VS_FFI_FILEFLAGSMASK
+FILEFLAGS               VER_DBG
+FILEOS                  VOS_NT
+FILETYPE                VFT_DRV
+FILESUBTYPE             VFT2_DRV_SYSTEM
+BEGIN
+	BLOCK "StringFileInfo"
+	BEGIN
+		BLOCK "040904b0"
+        BEGIN
+		VALUE "Comments",         "Cypress Bluetooth Driver"
+		VALUE "CompanyName",      "Windows on Raspberry Project"
+		VALUE "FileDescription",  "Cypress Bluetooth UART Transport Driver"
+		VALUE "FileVersion",      "1.0.0.0"
+		VALUE "InternalName",     "cywbtserialbus.sys"
+		VALUE "LegalCopyright",   "Copyright (c) 2020 Mario Bãlãnicã. All Rights Reserved."
+		VALUE "OriginalFilename", "cywbtserialbus.sys"
+		VALUE "ProductName",      "Cypress Bluetooth UART Transport Driver"
+		VALUE "ProductVersion",   "1.0.0.0"
+        END
+	END
+	BLOCK "VarFileInfo"
+	BEGIN
+		VALUE "Translation", 0x0409,1200
+	END
+END
+#endif
