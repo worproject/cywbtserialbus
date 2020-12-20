@@ -6,7 +6,7 @@ The initialization sequence is virtually the same on all these combo chips, so a
 
 We currently provide firmware/support for the following chips:
 * CYW43455 (BCM4345C0.hcd) - extensively tested on a Raspberry Pi 4
-* CYW43438 (BCM43430A1.hcd) - untested
+* CYW43438 (BCM43430A1.hcd) - tested on a Raspberry Pi 3 model B at a baud rate of 460800 (but unreliable as the RTS/CTS lines are not exposed)
 
 **Note:** since this driver uses the H4 protocol for communication, the UART link must support hardware flow control to prevent packet loss.
 
